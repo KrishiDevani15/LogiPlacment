@@ -41,6 +41,6 @@ def Login_process(request):
             return HttpResponse('Username and Password are incorect')
     return render(request, "views/signup.html")
 
-def hello(request):
-    return render(request, "views/hello.html")
+def index(request):
+    return render(request, "views/index.html")
 
