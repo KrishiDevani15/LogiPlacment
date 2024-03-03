@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate,login
 
 # Create your views here.
 def home(request):
-    return render(request, "views/homepage.html")
+    return render(request, "views/index.html")
 
 def signup(request):
     if request.method == 'POST':
@@ -34,13 +34,13 @@ def Login_process(request):
 
         if user is not None:
             login(request,user)
-            return redirect('home')
+            return redirect('hello')
             
             
         else:
-            return HttpResponse('Username and Password are incorect')
+            return HttpResponse('Username and Password are incorrect')
     return render(request, "views/signup.html")
 
 def index(request):
-    return render(request, "views/index.html")
+    return render(request, "views/index2.html")
 

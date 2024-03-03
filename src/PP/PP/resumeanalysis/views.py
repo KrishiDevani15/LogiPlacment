@@ -55,12 +55,12 @@ def show_pdf(file_path):
     return pdf_data
 
 
-def determine_candidate_level(total_experience):
-    if total_experience == 1:
+def determine_candidate_level(no_of_pages):
+    if no_of_pages == 1:
         return "Fresher"
-    elif total_experience == 2:
+    elif no_of_pages == 2:
         return "Intermediate"
-    elif total_experience >= 3:
+    elif no_of_pages >= 3:
         return "Experienced"
 
 
@@ -76,7 +76,7 @@ def resume_analysis(request):
 
         if resume_data:
             resume_text = pdf_reader(save_image_path)
-            cand_level = determine_candidate_level(resume_data["total_experience"])
+            cand_level = determine_candidate_level(resume_data["no_of_pages"])
             template = loader.get_template("resume_analysis.html")
             context = {
                 "resume_data": resume_data,
@@ -88,14 +88,14 @@ def resume_analysis(request):
                 "machine learning",
                 "deep Learning",
                 "flask",
-                "Seaborn",
                 "streamlit",
-                "matplotlib",
-                "numpy",
-                "pandas",
                 "python",
-                # "numpy"
                 "django",
+                "flask",
+                "numpy",
+                "matplotlib",
+                "seaborn",
+                "pandas",
             ]
             web_keyword = [
                 "react",
@@ -110,6 +110,10 @@ def resume_analysis(request):
                 "angular js",
                 "c#",
                 "flask",
+                "webDesign",
+                "wireframe",
+                "laravel",
+                "problem-solving",
             ]
             android_keyword = [
                 "android",
@@ -192,7 +196,6 @@ def resume_analysis(request):
                         "Node JS",
                         "React JS",
                         "php",
-                        "laravel",
                         "Magento",
                         "wordpress",
                         "Javascript",

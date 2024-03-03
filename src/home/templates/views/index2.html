@@ -1,0 +1,34 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogiPlacement</title>
+    <link rel="stylesheet" href="{%static "css/index2.css"%}">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="logo">LogiPlacement</div>
+        <ul class="nav-links">
+            <a href = "{% url 'home'%}" class = "{% if request.path == '/' %} active {% endif %}">Home</a></li>
+            <li><a href = "{% url 'signup'%}" class = "{% if request.path == '/signup/'%} active {% endif %}">Signup</a></li>
+            <li><a href = "{% url 'login'%}" class = "{% if request.path == '/login/'%} active {% endif %}">Login</a></li>
+        </ul>
+        <div class="sbutton" width="100px"></div>
+    </nav>
+
+    <div class="container">
+        <div id="particle-js"></div>
+            <!-- Add more resume items as needed -->
+        </div>
+    </div>
+    <!-- particle js -->
+    <script type='text/javascript' src={%static "js/particles.js"%}></script>
+    <script type='text/javascript' src={%static "js/myjs.js"%}></script>
+</body>
+
+</html>

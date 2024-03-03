@@ -19,7 +19,7 @@ body{
 
 .main{
     width: 350px;
-    height: 550px;
+    height: 560px;
     background: var(--bg-color);
     overflow: hidden;
     border-radius: 10px;
