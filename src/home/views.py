@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate,login
 
 # Create your views here.
 def home(request):
-    return render(request, "views/index.html")
+    return render(request, "views/index3.html")
 
 def signup(request):
     if request.method == 'POST':

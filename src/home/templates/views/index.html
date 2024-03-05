@@ -6,7 +6,7 @@
     <title>Resume index</title>
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static '/style.css' %}" />
   </head>
 
   <body>
@@ -19,18 +19,19 @@
         <li><a href="#"> About us </a></li>
         <li><a href="#"> Devloper </a></li>
       </ul>
-      <div id="login"><a href="/login">Login</a></div>
+      <div id="login"><a href="/singup">Login</a></div>
+
     </nav>
     <br />
     <br />
-    <div class="nav1" id="nav2">
+    {% comment %} <div class="nav1" id="nav2">
       <ul>
         <li id="Resume">
-          {% comment %} <a href="{% url 'resumepage' %}">Resume</a> {% endcomment %}
+          <a href="{% url 'resumepage' %}">Resume</a>
         </li>
 
         <li id="">
-          {% comment %} <a href="{% url 'list_resumes' %}">Template Resumes</a> {% endcomment %}
+          <a href="{% url 'list_resumes' %}">Template Resumes</a>
         </li>
         {% comment %} <li id="">
           <a href="{% url 'resum_analysis' %}">resum_analysis</a>
